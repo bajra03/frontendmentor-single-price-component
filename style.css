@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-cyan: hsl(179, 62%, 43%);
+  --primary-yellow: hsl(71, 73%, 54%);
+
+  --neutral-gray: hsl(204, 43%, 93%);
+  --neutral-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  flex-direction: column;
+  background-color: var(--neutral-gray);
+}
+
+main {
+  border-radius: 5px;
+  max-width: 350px;
+  box-shadow: 0 7px 14px 5px hsl(218deg 22% 67% / 30%);
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  position: relative;
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  padding: 1.8rem 1.2rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.title--primary {
+  color: var(--primary-cyan);
+}
+
+.intro__desc {
+  color: var(--neutral-blue);
+  margin-top: 1.4rem;
+}
+
+.intro__desc .intro__desc--highlight {
+  color: var(--primary-yellow);
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+  line-height: 1.3em;
+}
+
+.intro__desc p {
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.row-bottom {
+  color: hsl(0deg 0% 100%);
+}
+
+.row-bottom .col:nth-child(1){
+  background-color: var(--primary-cyan);
+}
+
+.row-bottom .col:nth-child(2){
+  background-color: hsl(179deg 47% 52%);
+}
+
+.subscription h2,
+.service h2 {
+  margin-bottom: 1.3rem;
+}
+
+.subscription__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  gap: .8rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.subscription__price span {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--neutral-gray);
+}
+
+.btn {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #303030;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 10px 15px 0px hsl(179deg 64% 31% / 69%);
+}
+
+.subscription__details {
+  margin-bottom: 1.8rem;
+}
+
+.btn--primary {
+  background-color: var(--primary-yellow);
+}
+
+.btn--primary:hover {
+  background-color: hsl(71deg 84% 39%);
+}
+
+.service ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  font-weight: 300;
+}
+
+.service ul li {
+  margin-bottom: .1rem;
+}
+
+@media (min-width: 768px){
+  main {
+    max-width: 645px;
+  }
+
+  .col {
+    padding: 2.5rem;
+  }
+
+  .intro h1 {
+    font-size: 1.5rem;
+}
+
+  .intro__desc .intro__desc--highlight {
+    margin-bottom: .5rem;
+  }
+
+  .row-bottom {
+    flex-direction: row;
+  }
+
+  .col-50 {
+    width: 50%;
+  }
+
+  .subscription h2, .service h2 {
+    font-weight: 600;
+  }
+
+  .service ul li {
+    font-size: .95rem;
+  }
+}
